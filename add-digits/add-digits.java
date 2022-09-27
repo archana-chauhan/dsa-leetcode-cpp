@@ -1,41 +1,18 @@
 class Solution {
+    
+    int calculateSumOfDigits(int num) {
+        int sum = 0;
+        while(num != 0){
+            sum += (num % 10);
+            num /= 10;
+        }
+        return sum;
+    }
+    
     public int addDigits(int num) {
-        // int x = 0;
-        while(num>=10){
-            int x=0;
-            while(num!=0){
-                x+=(num%10);
-                num/=10;
-            }
-            num=x;
+        while(num >= 10){
+            num = calculateSumOfDigits(num);
         }
         return num;
-        
-//         int result = 0;
-//         int sumOfDigits = 0, newResult = 0;
-        
-//         if (num <= 9) return num;
-        
-//         while (num != 0) {
-//             int remainder = num % 10;
-//             num = num / 10;
-//             sumOfDigits += remainder;
-//             result = sumOfDigits;
-//         }
-        
-//         while (result > 9) {
-//             if (result > 9) {
-//                 int rem = result % 10;
-//                 result = result/10;
-//                 newResult = rem + result; 
-//                 result = newResult;
-//                 System.out.println("rem: " + rem + " : sumOfDigits: " + sumOfDigits + " result: " + result);   
-//             }
-//             else {
-//                newResult = result; 
-//             }
-            
-//         } 
-        // return newResult;
     }
 }
