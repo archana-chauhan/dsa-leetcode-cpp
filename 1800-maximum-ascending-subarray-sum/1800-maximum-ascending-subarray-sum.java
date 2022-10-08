@@ -1,6 +1,5 @@
 class Solution {
-    public int maxAscendingSum(int[] nums) {
-        
+    public int maxAscendingSum(int[] nums) {   
         int max = Integer.MIN_VALUE, sum = nums[0];
         int result = 0;
         
